@@ -16,6 +16,7 @@ def connecttosqlserver(servername,databasename,query):
     for row in cursor:
         dataCollection.append(row)
     cursor.close()
+    connection.close()
     return dataCollection
 
 def createsmtpconnection(hostname,port,emailaddress,password):
